@@ -5,13 +5,13 @@ from keras.models import model_from_json
 emotion_dict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3: "Happy", 4: "Neutral", 5: "Sad", 6: "Surprised"}
 
 # Cargar json y modelo
-json_file = open('model/emotion_model.json', 'r')
+json_file = open('./emotion_model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 emotion_model = model_from_json(loaded_model_json)
 
 # Cargar pesos de modelo
-emotion_model.load_weights("model/emotion_model.h5")
+emotion_model.load_weights("./emotion_model.h5")
 print("Loaded model from disk")
 
 
